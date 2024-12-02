@@ -1,0 +1,14 @@
+.indicator {
+    display: flex;
+    gap: 6px;
+    margin-top: 7px !important;
+    width: 91%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.page {
+    font-family: 'Monomaniac One', serif;
+    font-size: 20px;
+    color: white;
+}

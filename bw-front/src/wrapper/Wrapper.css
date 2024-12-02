@@ -1,0 +1,19 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh !important;
+    margin: auto !important;
+    max-width: 100%;
+    width: 450px;
+    background-image: url('./../assets/images/backround.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.wrapper .content {
+    flex: 1;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,53 @@
+.status {
+  width: 91%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.profile-image {
+  width: 32px;
+  border-radius: 50%;
+}
+
+.username {
+  font-family: 'Monomaniac One', serif;
+  font-size: 20px;
+  color: white;
+}
+
+.counter {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+}
+
+.balance {
+  font-family: 'Monomaniac One', serif;
+  font-size: 24px;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.balance-unit {
+  font-family: 'Nico Moji', serif;
+  color: #FFD700;
+  font-size: 20px;
+  font-weight: normal;
+  padding-top: 5px !important;
+}
+
+.friends-count {
+  font-family: 'Monomaniac One', serif;
+  font-size: 20px;
+  color: white;
+}

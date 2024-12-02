@@ -1,0 +1,22 @@
+.alluser {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh !important;
+    background-image: url('../assets/images/backround.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #ffffff !important;
+    font-family: 'Monomaniac One', sans-serif;
+    margin: auto !important;
+    max-width: 100%;
+    width: 450px;
+}
+
+.alluser .content {
+    flex: 1;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}

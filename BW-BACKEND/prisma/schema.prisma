@@ -1,0 +1,85 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            Int         @id @default(autoincrement())
+  firstName     String
+  telegramId    String      @unique
+  profileImage  String      @default("AgACAgIAAxUAAWcvVZPNsdsHnU9o-LePuIBV_0HBAAJh5DEbW0CBSYh4-onU_JhlAQADAgADYQADNgQ")
+  referall      String?
+  balance       Int         @default(0)
+  referralCount Int         @default(0)
+  activation    Boolean     @default(false)
+
+  taskList  UserTask[]
+  wallet    Wallet[]
+  transactions Transaction[]
+
+  date       String
+  time       String
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@map("users")
+}
+
+model Task {
+  id          Int        @id @default(autoincrement())
+  title       String
+  description String?
+  cost        Int
+  link        String
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  userTasks   UserTask[]
+
+  @@map("tasks")
+}
+
+model UserTask {
+  id          Int      @id @default(autoincrement())
+  userId      Int
+  taskId      Int
+  completedAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id])
+  task Task @relation(fields: [taskId], references: [id])
+
+  @@unique([userId, taskId])
+  @@map("user_tasks")
+}
+
+model Wallet {
+  id            Int    @id @default(autoincrement())
+  walletAddress String
+  userId        Int    
+
+  user User @relation(fields: [userId], references: [id])
+
+  @@map("wallet")
+}
+
+model Countdown {
+  id     Int      @id @default(autoincrement())
+  date   DateTime
+  status Boolean
+}
+
+model Transaction {
+  id          Int      @id @default(autoincrement())
+  userId      Int
+  cryptoName  String
+  amount      Float
+  date        DateTime @default(now())
+  description String?
+
+  user User @relation(fields: [userId], references: [id])
+
+  @@map("transactions")
+}

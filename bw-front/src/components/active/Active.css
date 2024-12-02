@@ -1,0 +1,90 @@
+/* Yangi task__title uchun active bo'lganda yashil va glowing */
+.active-title {
+    color: #cece11; /* Yashil rang */
+    text-shadow: 1px 1px 8px rgb(232, 208, 27); /* Glowing ta'sir */
+}
+
+/* Bosilmaydigan tugma uchun yangi class */
+.disabled {
+    pointer-events: none;
+    opacity: 0.6;
+    background-color: rgba(60, 60, 60, 0.8); /* Shaffof bo'lib qoladi */
+}
+
+.task {
+    width: 91%;
+    margin: 0px auto;
+    border-radius: 12px;
+    height: 67px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(26, 26, 27, 0.5); /* Yarim shaffof qora rang */
+    backdrop-filter: blur(15px); /* Orqa fonni xiralashtirish */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Task atrofida engil soyani qo'shish */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Nozik oq chiziq */
+  }
+  
+  .task__info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .task__text {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .task__title {
+    font-family: 'Monomaniac One', serif;
+    font-size: 18px;
+    color: white;
+  }
+  
+  .task__description {
+    font-family: 'IBM Plex Mono', sans-serif;
+    font-size: 5px;
+    color: rgba(255, 255, 255, 0.7); /* Yoqimli oq rang */
+  }
+  
+  .task__button {
+    font-family: 'Monomaniac One', serif;
+    font-size: 16px;
+    color: white;
+    padding: 0px 24px 5px 24px;
+    width: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    background-color: rgba(40, 40, 40, 0.9); /* Tugma uchun shaffof fon */
+    backdrop-filter: blur(9px); /* Tugmaning orqa fonini xiralashtirish */
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Tugma atrofiga nozik oq chiziq */
+  }
+  
+  .task__button:hover {
+    background-color: rgba(102, 102, 102, 0.8); /* Tugma hoverda shaffof rang */
+  }
+  
+
+  .task__button2 {
+    font-family: 'Monomaniac One', serif;
+    font-size: 16px;
+    color: rgb(207, 180, 8);
+    padding: 0px 24px 5px 24px;
+    width: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    background-color: rgba(40, 40, 40, 0.9); /* Tugma uchun shaffof fon */
+    backdrop-filter: blur(9px); /* Tugmaning orqa fonini xiralashtirish */
+    text-align: center;
+    cursor: pointer;
+    text-shadow: 1px 1px 8px rgb(185, 199, 28); 
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Tugma atrofiga nozik oq chiziq */
+  }
